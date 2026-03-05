@@ -1,0 +1,16 @@
+[
+  {
+    "id": "urban-sim",
+    "title": "Urban Transportation Simulator",
+    "short": "Simulation model for optimizing urban mobility.",
+    "description": "Designed and developed a simulation model to analyze urban mobility patterns, optimizing traffic flow and public transportation efficiency. Integrated real-world constraints, tested scenarios, and improved system performance through iterative modeling.",
+    "technologies": ["JavaScript", "Modeling", "Data Analysis"]
+  },
+  {
+    "id": "galapagos-app",
+    "title": "Galápagos Recommendations Web App",
+    "short": "Full-stack review system for activities.",
+    "description": "Built a modular front-end architecture using JavaScript ES modules. Developed a review system with rating visualization, comment storage, and automatic ordering by date.",
+    "technologies": ["JavaScript", "ES Modules", "UI/UX"]
+  }
+]
