@@ -12,5 +12,12 @@
     "short": "Full-stack review system for activities.",
     "description": "Built a modular front-end architecture using JavaScript ES modules. Developed a review system with rating visualization, comment storage, and automatic ordering by date.",
     "technologies": ["JavaScript", "ES Modules", "UI/UX"]
+  },
+  {
+  "id": "networking-microservice",
+  "title": "Networking Microservice Dashboard",
+  "short": "Interactive dashboard for TCP-based microservice.",
+  "description": "Developed a real-time dashboard that communicates with a custom TCP microservice through a WebSocket bridge. Implemented server info retrieval, message exchange, and multiple utility endpoints, showcasing backend communication, protocol translation, and dynamic UI integration.",
+  "technologies": ["Node.js", "WebSockets", "TCP", "JavaScript", "Backend Integration"]
   }
 ]

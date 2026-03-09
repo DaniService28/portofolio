@@ -40,6 +40,24 @@ app.get("/projects", (req, res) => {
     });
 });
 
+// Vista especial para el proyecto Networking Microservice
+app.get("/projects/networking-microservice", (req, res) => {
+    const projects = require("./public/data/projects.json");
+    const project = projects.find(p => p.id === "networking-microservice");
+
+    res.render("projects/networking-microservice", {
+        title: project.title,
+        project,
+        activePage: "projects"
+    });
+});
+
+// Ruta para cargar el panel parcial del microservicio
+app.get("/partials/network", (req, res) => {
+    res.render("partials/network", { layout: false });
+});
+
+
 // Start server
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);

@@ -28,5 +28,21 @@ async function loadProject(id) {
         <ul>
             ${project.technologies.map(t => `<li>${t}</li>`).join("")}
         </ul>
+        <div id="network-panel-container"></div>
+        <div id="dynamic-fields"></div>
+        <pre id="server-response"></pre>
+
     `;
+
+    // 6. Si es el proyecto networking-microservice, cargar panel extra
+    if (id === "networking-microservice") {
+        const panelRes = await fetch("/partials/network");
+        const panelHTML = await panelRes.text();
+        document.getElementById("network-panel-container").innerHTML = panelHTML;
+
+        if (typeof connectToBridge === "function") {
+            connectToBridge();
+            }
+    }
+
 }

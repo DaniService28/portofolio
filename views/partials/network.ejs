@@ -1,0 +1,129 @@
+<div class="network-panel">
+
+    <h2>Microservice Panel</h2>
+
+    <label>Acción:</label>
+    <select id="action" onchange="renderFieldsForAction(this.value)">
+        <option value="get_info">Get Info</option>
+        <option value="get_time">Get Time</option>
+        <option value="chat_message">Chat Message</option>
+        <option value="math">Math</option>
+        <option value="random_number">Random Number</option>
+        <option value="uppercase">Uppercase</option>
+        <option value="reverse_string">Reverse String</option>
+        <option value="read_file">Read File</option>
+    </select>
+
+    <!-- Campos dinámicos -->
+    <div id="dynamic-fields"></div>
+
+    <button onclick="sendNetworkRequest()">Send</button>
+
+    <h3>Response:</h3>
+    <pre id="network-response">---</pre>
+
+</div>
+
+<style>
+.field-group {
+    margin-bottom: 12px;
+}
+
+.field-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.field-group input {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+.network-panel {
+    margin-top: 30px;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s ease;
+    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+.network-panel:hover {
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.network-panel h2 {
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 12px;
+    display: block;
+    color: #444;
+}
+
+select, input {
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    transition: all 0.2s ease;
+    font-size: 15px;
+}
+
+select:hover, input:hover {
+    border-color: #888;
+}
+
+select:focus, input:focus {
+    border-color: #4a8bff;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(74,139,255,0.2);
+    outline: none;
+}
+
+button {
+    margin-top: 18px;
+    margin-bottom: 12px;
+    padding: 12px 18px;
+    background: #4a8bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+button:hover {
+    background: #3a78e0;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0px);
+}
+
+#network-response {
+    margin-top: 10px;
+    background: #1e1e1e;
+    color: #dcdcdc;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    font-size: 14px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #333;
+}
+</style>
